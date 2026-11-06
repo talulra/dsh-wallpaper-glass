@@ -49,8 +49,14 @@ Appended to the profile's `cordis.patch.yml` by the installer:
 ## Install / uninstall
 
 ```powershell
-C:\deepseek\resources\runtime\cli\bin\dsh.cmd plugin --profile desktop add link:C:\deepseek\dsh-wallpaper-glass
-C:\deepseek\resources\runtime\cli\bin\dsh.cmd plugin --profile desktop remove dsh-wallpaper-glass
+# from GitHub
+dsh plugin --profile desktop add github:talulra/dsh-wallpaper-glass
+
+# local development, from a checkout
+dsh plugin --profile desktop add link:C:\deepseek\dsh-wallpaper-glass
+
+# uninstall
+dsh plugin --profile desktop remove dsh-wallpaper-glass
 ```
 
 Installing writes the dependency into the profile manifest and appends the bundle to `dsh.profile.bundles`. With HMR enabled a saved config recomposes live; otherwise restart the client.
