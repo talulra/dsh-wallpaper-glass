@@ -1,0 +1,23 @@
+# ============================================================================
+# dsh-wallpaper-glass —— DSH bundle patch
+# ============================================================================
+# This is the "mount declaration" of the plugin. DSH stacks each bundle's patch
+# on top of the profile's layer stack, so this file inserts the plugin into the
+# Web profile's configuration tree.
+#
+# Install (development, from this directory):
+#   dsh plugin --profile desktop add link:C:\deepseek\dsh-wallpaper-glass
+# then append "dsh-wallpaper-glass" to dsh.profile.bundles in the profile's
+# package.json (done automatically by the Desktop Plugins page / plugin_manager).
+#
+# Config fields (all optional, shown with their defaults):
+#   intensity:  medium   # subtle | medium | strong —— how transparent the UI is
+#   blur:       0        # 0-40 px —— blur applied to the wallpaper itself
+#   pollMs:     4000     # how often the browser asks whether the wallpaper changed
+#   imagePath:  ''       # force one image file instead of the live system wallpaper
+#   enabled:    true
+# ============================================================================
+
+- insert:
+    - id: ui-wallpaper-glass
+      name: dsh-wallpaper-glass

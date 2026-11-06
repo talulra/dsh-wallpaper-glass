@@ -1,0 +1,49 @@
+{
+  "name": "dsh-wallpaper-glass",
+  "version": "0.5.4",
+  "description": "Reveal the local desktop wallpaper behind a translucent, auto-adapting DeepSeek Harness UI. · 把本地系统壁纸显示在 DSH 界面背后，界面自动半透明并随壁纸明暗自适应。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "client",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "assets",
+    "screenshots.json"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "wallpaper",
+    "theme",
+    "glassmorphism"
+  ],
+  "license": "MIT",
+  "author": "dsh-wallpaper-glass contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/talulra/dsh-wallpaper-glass.git"
+  },
+  "homepage": "https://github.com/talulra/dsh-wallpaper-glass#readme",
+  "bugs": {
+    "url": "https://github.com/talulra/dsh-wallpaper-glass/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}
