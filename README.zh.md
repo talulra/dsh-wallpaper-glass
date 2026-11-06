@@ -49,11 +49,14 @@ profile 的 `cordis.patch.yml` 里（安装时已自动追加）：
 ## 安装 / 卸载
 
 ```powershell
-# 安装
-C:\deepseek\resources\runtime\cli\bin\dsh.cmd plugin --profile desktop add link:C:\deepseek\dsh-wallpaper-glass
+# 安装（从 GitHub）
+dsh plugin --profile desktop add github:talulra/dsh-wallpaper-glass
+
+# 本地开发时改用 link:
+dsh plugin --profile desktop add link:C:\deepseek\dsh-wallpaper-glass
 
 # 卸载
-C:\deepseek\resources\runtime\cli\bin\dsh.cmd plugin --profile desktop remove dsh-wallpaper-glass
+dsh plugin --profile desktop remove dsh-wallpaper-glass
 ```
 
 安装会把依赖写进 profile 的 `package.json` 并加入 `dsh.profile.bundles`。DSH 开了 HMR 时保存配置即热重载，否则重启客户端生效。
